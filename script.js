@@ -39,15 +39,21 @@ function startTimer() {
 }
 
 function stopTimer() {
+  if (!isRunning) return;
   clearInterval(timerInterval);
+  isRunning = false;
   StopBtn.textContent = "Stop";
 }
 
 function resetTimer() {
   clearInterval(timerInterval);
+  timerInterval = null;
+  startTime = 0;
   elapsedTime = 0;
   lastLapTime = 0;
   lapCount = 0;
+  isRunning = false;
+
   updateDisplay(0);
   lapsContainer.innerHTML = "";
   startStopBtn.textContent = "Stop";
