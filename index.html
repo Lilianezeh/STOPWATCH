@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stopwatch App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h2>Stopwatch</h2>
+      <label class="switch">
+        <input type="checkbox" id="themeToggle" />
+        <span class="slider"></span>
+      </label>
+    </header>
+
+    <!-- Dispaly -->
+    <div class="display">
+      <h1 id="time">00:00:00</h1>
+      <span id="milliseconds">000</span>
+    </div>
+
+    <!-- Controls -->
+    <div class="buttons">
+      <button id="start">Start</button>
+      <button id="Stop">Stop</button>
+      <button id="lap">Lap</button>
+      <button id="reset">Reset</button>
+    </div>
+
+    <!-- Bonus -->
+    <div id="laps" class="laps"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
